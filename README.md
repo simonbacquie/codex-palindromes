@@ -23,9 +23,9 @@ Find the largest palindrome(s) comprised of "A, C, T, G" which build the followi
 
 ## Usage
 
-  ruby palindrome.rb tacattaccgccgc
+    ruby palindrome.rb tacattaccgccgc
 
 The examples listed in the original problem are built into the script, to run them:
 
-  ruby palindrome.rb ? [problem number]
-  ruby palindrome.rb ? 5
+    ruby palindrome.rb ? [problem number]
+    ruby palindrome.rb ? 5
