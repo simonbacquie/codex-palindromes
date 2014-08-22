@@ -1,8 +1,11 @@
+# HANDLE INPUT
 in_string = ARGV[0]
+
 if in_string.nil?
 	puts "** You must pass a string of letters as an argument to this script."
 	exit
 end
+
 if in_string == "?"
 	example_num = ARGV[1].to_i
 	if !(1..5).include? example_num
@@ -13,13 +16,12 @@ if in_string == "?"
 	examples = ["at", "gag", "cacatat", "ttgatgggt", "cacaattcccatgggttgtggag"]
 	in_string = examples[example_index]
 end
-last_index = in_string.length - 1
 
+last_index = in_string.length - 1
 palindromes = []
 longest_palindrome = ""
 
-examples = ["at", "gag", "cacatat", "ttgatgggt", "cacaattcccatgggttgtggag"]
-
+# FIND PALINDROMES
 (0..last_index).each do |substr_start|
 	(substr_start..last_index).each do |substr_end|
 		substr = in_string[substr_start..substr_end]
@@ -34,6 +36,7 @@ examples = ["at", "gag", "cacatat", "ttgatgggt", "cacaattcccatgggttgtggag"]
 	end
 end
 
+# DISPLAY RESULTS
 if longest_palindrome.length > 0
 	puts "** #{palindromes.length} palindromes were found:"
 	palindromes.each do |pal|
